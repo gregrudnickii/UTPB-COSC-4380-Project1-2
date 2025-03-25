@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Locale;
 
 public abstract class Cipher {
     public static char[] lowercaseAlpha = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
@@ -12,7 +11,7 @@ public abstract class Cipher {
 
     public Cipher() {}
 
-    void swap(char[] alpha) {
+    void swap(char[] alpha, int start, int i) {
         int a = (int)(Math.random() * alpha.length);
         int b = (int)(Math.random() * alpha.length);
         char c = alpha[a];
@@ -23,7 +22,7 @@ public abstract class Cipher {
     void scramble(char[] alpha) {
         for(int i = 0; i < alpha.length; i++) {
             for (int j = 0; j < alpha.length; j++) {
-                swap(alpha);
+                swap(alpha, j, j);
             }
         }
     }

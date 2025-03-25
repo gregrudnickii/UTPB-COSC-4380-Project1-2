@@ -120,7 +120,7 @@ public class PolyCipher extends Cipher {
         PolyCipher cipher = new PolyCipher(key, alphas);
         cipher.generateSquare();
         cipher.printSquare();
-        System.out.println("\nKey used for encryption:" + key);
+        System.out.println("\nKey used for encryption: " + key);
 
         // Encrypt the plaintext
         String encryptedText = cipher.encrypt(plaintext);
